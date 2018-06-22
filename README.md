@@ -1,4 +1,7 @@
 This reproduces a build bug when using config in `package.json`
+
+https://github.com/facebook/create-react-app/issues/4665
+
 ```
   "browserslist": {
     "development": [
@@ -28,7 +31,7 @@ Repro in Demo app:
 1. `yarn start`
 1. Click on the red div element. Observe an alert saying `Works`.
 1. `yarn build`
-1. node_modules/.bin/serve build/
+1. `node_modules/.bin/serve build/`
 1. Click on the red div element.
 Observe an alert saying `TypeError: Assignment to constant variable.`
 Expect `Works`
